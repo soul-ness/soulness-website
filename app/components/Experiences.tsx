@@ -6,30 +6,29 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { Buttons } from './ui/Buttons';
+import { useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const EXPERIENCES = [
   {
-    title: 'Cacao Journaling and Sound Healing',
-    subtitle: 'Saturday 15th of May from 10:30am - 12pm inversion $44',
-    label: 'Book now',
+    id: 'cacao',
     image: '/images/experiences/ex1.jpg',
     link: 'https://www.verdevida.com.au/es/retreat',
   },
   {
-    title: 'Sound Healing',
-    subtitle: 'Saturday 15th of May from 10:30am - 12pm inversion $44',
-    label: 'Book now',
+    id: 'sound',
     image: '/images/experiences/ex2.jpg',
     link: 'https://www.verdevida.com.au/es/retreat',
   },
 ];
 
+
 export default function Experiences() {
   const rootRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const t = useTranslations('Experiences');
 
   useGSAP(
     () => {
@@ -106,23 +105,19 @@ export default function Experiences() {
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 md:gap-30 items-center">
         <div className="flex flex-col justify-center text-center md:text-left">
           <p data-experience="eyebrow" className="text-vanilla text-eyebrow">
-            group experiences
+            {t('eyebrow')}
           </p>
           <h1
             data-experience="title"
             className="font-title text-white text-title uppercase font-normal mt-6"
           >
-            You don't have to heal alone
+            {t('title')}
           </h1>
           <p
             data-experience="body"
             className="font-body text-beige text-body mt-6 max-w-xl mx-auto mb-6"
           >
-            Healing is amplified in community. These experiences are designed to
-            support your nervous system and energy field within a collective
-            container of coherence, safety, and presence. They remind us that
-            we’re not meant to do this work alone, that connection itself is
-            medicine.
+            {t('body')}
           </p>
         </div>
         <div className="relative">
@@ -133,13 +128,13 @@ export default function Experiences() {
           >
             {EXPERIENCES.map((experience) => (
               <div
-                key={experience.title}
+                key={experience.id}
                 data-experience="card"
                 className="relative aspect-3/4 w-full shrink-0 snap-start overflow-hidden"
               >
                 <Image
                   src={experience.image}
-                  alt={experience.label}
+                  alt={t(`${experience.id}.label`)}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
@@ -147,10 +142,10 @@ export default function Experiences() {
                 <div className="absolute inset-0 bg-linear-to-b from-cherry/87 via-transparent to-cherry/80" />
                 <div className="absolute top-6 left-0 right-0 text-center">
                   <p className="font-title text-white  text-[22px] uppercase px-6 ">
-                    {experience.title}
+                    {t(`${experience.id}.title`)}
                   </p>
                   <p className="font-body text-white font-semibold text-[12px] tracking-[0.15em] uppercase mt-1 px-10">
-                    {experience.subtitle}
+                    {t(`${experience.id}.subtitle`)}
                   </p>
                 </div>
                 <div className="absolute bottom-6 left-0 right-0 flex justify-center">
@@ -160,7 +155,7 @@ export default function Experiences() {
                     rel="noreferrer"
                     target="_blank"
                   >
-                    {experience.label}
+                    {t(`${experience.id}.label`)}
                   </Buttons>
                 </div>
               </div>
@@ -170,7 +165,7 @@ export default function Experiences() {
             type="button"
             data-experience="arrow"
             onClick={handlePrev}
-            aria-label="Previous experience"
+            aria-label={t('prevLabel')}
             className="absolute cursor-pointer top-1/2 -left-15 hidden h-10 w-10 -translate-y-1/2 items-center justify-center text-vanilla hover:text-oat md:flex"
           >
             <svg
@@ -191,7 +186,7 @@ export default function Experiences() {
             type="button"
             data-experience="arrow"
             onClick={handleNext}
-            aria-label="Next experience"
+            aria-label={t('nextLabel')}
             className="absolute cursor-pointer top-1/2 -right-15 hidden h-10 w-10 -translate-y-1/2 items-center justify-center text-vanilla hover:text-oat md:flex"
           >
             <svg
@@ -211,10 +206,10 @@ export default function Experiences() {
           <div className="mt-4 flex justify-center gap-2 md:hidden">
             {EXPERIENCES.map((experience, index) => (
               <button
-                key={experience.title}
+                key={experience.id}
                 type="button"
                 onClick={() => scrollToIndex(index)}
-                aria-label={`Go to slide ${index + 1}`}
+                aria-label={t('goToSlide', { number: index + 1 })}
                 className={`h-2 w-2 rounded-full transition-colors ${
                   index === activeIndex ? 'bg-vanilla' : 'bg-vanilla/30'
                 }`}

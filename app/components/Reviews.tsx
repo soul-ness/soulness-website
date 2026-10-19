@@ -5,34 +5,21 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const REVIEWS = [
-  {
-    title: "Dani's Journey from control to clarity",
-    quote:
-      '“Each session has been magical and transformative. I’ve discovered parts of myself that allowed me to grow in every area of my life, from my purpose to my relationships.”',
-    name: 'Dani',
-  },
-  {
-    title: "Abi's story overcoming overwhelm",
-    quote:
-      '“Since we started, I’ve stepped into my new business with confidence and ease. My body isn’t struggling, I can expand without losing myself.”',
-    name: 'Abi',
-  },
-  {
-    title: "Joan's shift from emotional exhaustion to calm",
-    quote:
-      '“At first I was skeptical about energy work, but I can feel how much it has helped me. I’m finally back to myself, calm, happy, and grounded.”',
-    name: 'Joan',
-  },
+  { id: 'dani', name: 'Dani' },
+  { id: 'abi', name: 'Abi' },
+  { id: 'joan', name: 'Joan' },
 ];
 
 export default function Reviews() {
   const rootRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const t = useTranslations('Reviews');
 
   useGSAP(
     () => {
@@ -101,13 +88,14 @@ export default function Reviews() {
     <section
       id="reviews"
       ref={rootRef}
-      className="relative overflow-hidden min-h-[50vh] md:min-h-[60vh] flex items-center justify-center px-6 py-16 md:py-0"
+      className="relative overflow-hidden min-h-[50vh] md:min-h-[60vh] flex items-center justify-center px-6 py-16 md:px-10 md:py-10"
     >
       <div data-reviews="bg" className="absolute inset-x-0 -top-[15%] h-[130%]">
         <Image
           src="/images/hero/review1.jpg"
           alt=""
           fill
+          loading="eager"
           sizes="100vw"
           className="object-cover"
           onLoad={() => ScrollTrigger.refresh()}
@@ -121,7 +109,7 @@ export default function Reviews() {
           className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {REVIEWS.map((review) => (
-            <div key={review.name} className="w-full shrink-0 snap-start px-1">
+            <div key={review.id} className="w-full shrink-0 snap-start px-1">
               <div
                 data-reviews="card"
                 className="bg-vanilla px-8 py-10 md:px-10 md:py-12"
@@ -139,11 +127,11 @@ export default function Reviews() {
                   ))}
                 </div>
                 <p className="font-title text-cherry text-[20px] leading-[1.5] md:text-[22px]">
-                  {review.title}
+                  {t(`${review.id}.title`)}
                 </p>
 
                 <p className="font-quote text-beigeDark text-[16px] leading-[1.5] md:text-[19px] mt-2">
-                  {review.quote}
+                  {t(`${review.id}.quote`)}
                 </p>
                 <p className="font-body text-cherry mt-6 text-[11px] tracking-[0.15em] uppercase">
                   — {review.name}
@@ -157,7 +145,7 @@ export default function Reviews() {
           type="button"
           data-reviews="arrow"
           onClick={handlePrev}
-          aria-label="Previous review"
+          aria-label={t('prevLabel')}
           className="absolute top-1/2 -left-15 hidden h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center text-white hover:text-oat md:flex"
         >
           <svg
@@ -178,7 +166,7 @@ export default function Reviews() {
           type="button"
           data-reviews="arrow"
           onClick={handleNext}
-          aria-label="Next review"
+          aria-label={t('nextLabel')}
           className="absolute top-1/2 -right-15 hidden h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center text-white hover:text-oat md:flex"
         >
           <svg
@@ -202,7 +190,7 @@ export default function Reviews() {
               key={review.name}
               type="button"
               onClick={() => scrollToIndex(index)}
-              aria-label={`Go to review ${index + 1}`}
+              aria-label={t('goToReview', { number: index + 1 })}
               className={`h-2 w-2 rounded-full transition-colors ${
                 index === activeIndex ? 'bg-cherry' : 'bg-cherry/30'
               }`}

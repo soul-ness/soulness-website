@@ -5,9 +5,11 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Buttons } from './ui/Buttons';
 import { openCalendlyPopup } from '../lib/calendly';
+import { useTranslations } from 'next-intl';
 
 export default function Cta() {
   const rootRef = useRef<HTMLElement>(null);
+  const t = useTranslations('Cta');
 
   useGSAP(
     () => {
@@ -49,13 +51,10 @@ export default function Cta() {
           data-cta="heading"
           className="font-title text-noir text-title font-normal uppercase"
         >
-          The next chapter begins with you.
+          {t('heading')}
         </h1>
         <p data-cta="text" className="font-body text-noir text-body mt-6">
-          This work isn’t about doing more, it’s about coming home to yourself
-          and your body. Together, we’ll support your nervous system, clear
-          what’s been weighing you down, and reconnect you to your natural
-          rhythm so you can move forward feeling grounded, inspired, and alive.
+          {t('text')}
         </p>
         <Buttons
           data-cta="cta"
@@ -63,7 +62,7 @@ export default function Cta() {
           className="mt-6"
           onClick={openCalendlyPopup}
         >
-          Initial appointment
+          {t('cta')}
         </Buttons>
       </div>
     </section>

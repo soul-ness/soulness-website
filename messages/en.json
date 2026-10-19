@@ -1,0 +1,161 @@
+{
+  "Nav": {
+    "offerings": "Offerings",
+    "aboutAna": "About Ana",
+    "experiences": "Group Experiences",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "switchLabel": "Cambiar a español"
+  },
+  "Hero": {
+    "heading1": "Regulate.",
+    "headingEmphasis": "Release.",
+    "heading2": "Return to yourself.",
+    "text": "Healing isn't about becoming someone new. It's about returning to yourself, understanding what your body has been carrying, so you can move through life with more presence, clarity and trust.",
+    "cta": "Book a Session",
+    "imageAlt": "Woman relaxing in a chair"
+  },
+  "Services": {
+    "eyebrow": "ways we can work together",
+    "title": "Come back to yourself",
+    "body": "I support women through change, new beginnings, and life's meaningful transitions. Through nervous system regulation, body-based healing, and stimulating your own vital force energy, I help you release what you no longer need to carry and reconnect with yourself from a place of greater calm, clarity, and trust. Because when you reconnect with yourself. The way you live, choose, and experience the world begins to change too.",
+    "individual": {
+      "label": "Individual Sessions",
+      "description": "Personalized energy and nervous system sessions combining Spinal Energetics, Sound Healing, and subconscious work. Perfect for moments of transition when you need clarity, balance, and deeper reconnection with yourself.",
+      "ctaLabel": "Initial Appointment"
+    },
+    "group": {
+      "label": "Group Experiences",
+      "description": "A space to slow down, reconnect with yourself, and step away from the noise of everyday life. Through sharing circles, Sound Healing, Spinal Energetics, and nervous system regulation practices, you'll be supported in releasing tension, calming your nervous system, and coming back to yourself. Surrounded by a community of women walking their own journey.",
+      "ctaLabel": "Book now"
+    },
+    "journey": {
+      "label": "A Journey Within",
+      "description": "A 33-card deck to realign your energy and reconnect with your intuition. Instead of rushing into your day, take a brief pause that brings clarity, resets your energy, and centers you in self-connection. Space to breathe, even on the busiest days.",
+      "ctaLabel": "See more"
+    }
+  },
+  "About": {
+    "eyebrow": "Founder of Soulness",
+    "heading": "Meet Ana",
+    "text": "I believe the body is always trying to lead us back to ourselves. That's why I support women in understanding what they've been carrying for so long and creating the inner conditions to reconnect with themselves. Because when you understand your story, you stop reacting from it. And you begin to build a life that reflects who you truly are, not who you had to become to survive.",
+    "cta": "About Me",
+    "sideEyebrow": "Nervous system and energy practitioner",
+    "quote": "“I believe your body already knows the way home. It simply needs the space to guide you there”",
+    "imageMainAlt": "Portrait of Ana",
+    "imageSideAlt": "Detail shot"
+  },
+  "Experiences": {
+    "eyebrow": "group experiences",
+    "title": "You don't have to do this alone",
+    "body": "There is something deeply healing about slowing down alongside other women. About realizing you're not the only one who has felt lost, exhausted, or disconnected. Each gathering is an invitation to slow down, reconnect with yourself, and allow your body to remember what it feels like to be held in community. Connection is also healing.",
+    "prevLabel": "Previous experience",
+    "nextLabel": "Next experience",
+    "goToSlide": "Go to slide {number}",
+    "cacao": {
+      "title": "Cacao Journaling and Sound Healing",
+      "subtitle": "Saturday 15th of May from 10:30am - 12pm inversion $44",
+      "label": "Book now"
+    },
+    "sound": {
+      "title": "Sound Healing",
+      "subtitle": "Saturday 15th of May from 10:30am - 12pm inversion $44",
+      "label": "Book now"
+    }
+  },
+  "Deck": {
+    "heading": "A 33-card deck to help you come back to yourself",
+    "bodyPart1": "Created to bring more intention to your mornings, each card invites you to pause, reflect, reconnect with your intuition, and gently rewrite the beliefs that no longer serve you. A few intentional minutes can change the way you move through your day.",
+    "bodyPart2": "A simple yet powerful ritual to align with your highest self. Inspired by the principles of Theta Healing and the infinite realms of consciousness, this deck is your gateway to personal growth and alignment.",
+    "cta": "GET YOURS",
+    "imageHandsAlt": "Ana's hands resting together",
+    "imageDetailAlt": "Close up detail",
+    "imageTableAlt": "Wooden table"
+  },
+  "Cta": {
+    "heading": "The next chapter begins with you",
+    "text": "This work isn't about becoming someone new. Or fixining yourself. It's about creating the conditions for your body to remember what it already knows. Together, we'll support your nervous system, stimulate your vital force, and help your body release what it no longer needs to hold. So you can reconnect with yourself and live with more presence, clarity, health, and trust.",
+    "cta": "Initial appointment"
+  },
+  "Reviews": {
+    "prevLabel": "Previous review",
+    "nextLabel": "Next review",
+    "goToReview": "Go to review {number}",
+    "dani": {
+      "title": "Dani's Journey from control to clarity",
+      "quote": "“Each session has been magical and transformative. I've discovered parts of myself that allowed me to grow in every area of my life, from my purpose to my relationships.”"
+    },
+    "abi": {
+      "title": "Abi's story overcoming overwhelm",
+      "quote": "“Since we started, I've stepped into my new business with confidence and ease. My body isn't struggling, I can expand without losing myself.”"
+    },
+    "joan": {
+      "title": "Joan's shift from emotional exhaustion to calm",
+      "quote": "“At first I was skeptical about energy work, but I can feel how much it has helped me. I'm finally back to myself, calm, happy, and grounded.”"
+    }
+  },
+  "Footer": {
+    "taglinePart1": "Where your body is heard, your nervous system is supported, and healing begins from within.",
+    "taglinePart2": "Based in Melbourne, supporting clients worldwide.",
+    "navigate": "Navigate",
+    "contactMe": "Contact me",
+    "instagramLabel": "Instagram",
+    "emailLabel": "Email",
+    "copyright": "© 2026 ANA FROM SOULNESS",
+    "credit": "Design and development by"
+  },
+  "AboutHero": {
+    "heading": "Welcome, my name is Ana Villareal",
+    "imageAlt": "Ana",
+    "text": "I'm here to guide you back to the part of you that already knows how to return to balance."
+  },
+  "AboutAna": {
+    "heading1": "My own journey began with loss and life-changing transitions",
+    "body1Part1": "Losing my mum at a young age, navigating changes in my family, and moving across the world shaped the way I learned to survive. Over time, my body started speaking louder than my mind: exhaustion, IBS flare-ups, anxiety, and disconnection. Learning to support my nervous system and stimulate my vital energy changed everything.",
+    "body1Part2": "I realized healing wasn't about fixing myself, it was about creating the conditions to reconnect with myself and trust the wisdom of my body. Now, I support other women through their own transitions, helping them come back to themselves.",
+    "imageSittingAlt": "Ana sitting",
+    "imageSittingAlt2": "Ana sitting 2",
+    "imageDetailAlt": "Ana detail",
+    "heading2": "Each session and program is an experience",
+    "body2Part1": "Where your body, nervous system, energy, and subconscious are supported as one interconnected system. Rather than focusing on symptoms alone, I integrate Spinal Energetics, Sound Healing, ThetaHealing, subconscious work, and Homeopathy to help uncover what your body has been carrying and create the conditions for lasting change.",
+    "body2Part2": "Every modality has a different role, but they all share the same intention: to support your body's innate ability to return to balance."
+  },
+  "AboutCert": {
+    "eyebrow": "Certifications & Training",
+    "title": "Grounded in study, enriched by",
+    "body": "Experience, and guided by a deep respect for the wisdom of the body. Every modality I've trained in has a different role, yet they all share the same intention: to support the body's innate intelligence, stimulate its vital force, and help create the conditions for deep, lasting transformation.",
+    "goToCert": "Go to certification {number}",
+    "spinal": {
+      "title": "Spinal Energetics Level 2",
+      "subtitle": "Works with the spine as a bridge between the physical and energetic body, releasing stored tension and restoring natural flow."
+    },
+    "sound": {
+      "title": "Sound Healing",
+      "subtitle": "Uses sound frequencies and vibration to guide the body into coherence and deep relaxation, supporting natural healing."
+    },
+    "theta": {
+      "title": "ThetaHealing® Advanced",
+      "subtitle": "A subconscious reprogramming technique that clears limiting beliefs, aligning the mind with the body's natural healing process."
+    },
+    "homeopathy": {
+      "title": "Diploma in Homeopathy",
+      "subtitle": "Homeopathy is a natural system of medicine that uses highly individualized remedies to stimulate the body's vital force, supporting its innate ability to heal and return to balance."
+    }
+  },
+  "Contact": {
+    "heading": "Let's get in touch",
+    "text": "Fill out the short form below and let's explore what support would serve you best.",
+    "nameLabel": "Name *",
+    "emailLabel": "Email *",
+    "messageLabel": "What is calling you in here today? *",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "errorName": "Please enter your name.",
+    "errorEmail": "Please enter a valid email.",
+    "errorMessageTooShort": "Your message should be at least 10 characters.",
+    "errorRateLimit": "Too many requests. Please wait a minute and try again.",
+    "errorGeneric": "Please check your details and try again.",
+    "errorSendFailed": "Something went wrong sending your message. Please try again.",
+    "successMessage": "Thanks so much for your message! I will contact you soon."
+  }
+}

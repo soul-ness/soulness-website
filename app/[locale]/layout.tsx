@@ -1,4 +1,4 @@
-// app/layout.tsx
+// app/[locale]/layout.tsx
 import type { Metadata } from 'next';
 import {
   Bodoni_Moda,
@@ -6,10 +6,13 @@ import {
   Poppins,
   Playfair_Display,
 } from 'next/font/google';
-import './globals.css';
-import Nav from './components/Nav';
-import Footer from './components/Footer';
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
+import '../globals.css';
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 import Script from 'next/script';
+import { routing } from '../../i18n/routing';
 
 const title = Bodoni_Moda({
   subsets: ['latin'],
@@ -45,13 +48,25 @@ export const metadata: Metadata = {
   description: 'Soulness wellness practice',
 };
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link
           rel="stylesheet"
@@ -61,9 +76,11 @@ export default function RootLayout({
       <body
         className={`${title.variable} ${italic.variable} ${body.variable} ${quote.variable}`}
       >
-        <Nav />
-        {children}
-        <Footer />
+        <NextIntlClientProvider>
+          <Nav />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="afterInteractive"

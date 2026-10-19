@@ -7,9 +7,11 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Buttons } from './ui/Buttons';
 import { openCalendlyPopup } from '../lib/calendly';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
   const rootRef = useRef<HTMLElement>(null);
+  const t = useTranslations('Hero');
 
   useGSAP(
     () => {
@@ -56,15 +58,14 @@ export default function Hero() {
             data-hero="heading"
             className="font-title text-oatBright text-title font-normal uppercase"
           >
-            Regulate.
-            <em className="italic text-cherry"> Realign.</em>
+            {t('heading1')}
             <br />
-            Return to yourself.
+            <em className="italic text-cherry"> {t('headingEmphasis')}</em>
+            <br />
+            {t('heading2')}
           </h1>
           <p data-hero="text" className="font-body text-noir text-body mt-6">
-            When everything's changing, your body, mind, and energy are
-            recalibrating too. Here, you learn to regulate, release what’s
-            heavy, and return to yourself with calm confidence.
+            {t('text')}
           </p>
           <Buttons
             data-hero="cta"
@@ -72,7 +73,7 @@ export default function Hero() {
             className="mt-6"
             onClick={openCalendlyPopup}
           >
-            Book a Session
+            {t('cta')}
           </Buttons>
         </div>
       </div>
@@ -84,7 +85,7 @@ export default function Hero() {
       >
         <Image
           src="/images/hero/hero.jpg"
-          alt="Woman relaxing in a chair"
+          alt={t('imageAlt')}
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover"

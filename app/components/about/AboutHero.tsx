@@ -4,9 +4,11 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { useTranslations } from 'next-intl';
 
 export default function AboutHero() {
   const rootRef = useRef<HTMLElement>(null);
+  const t = useTranslations('AboutHero');
 
   useGSAP(
     () => {
@@ -47,7 +49,7 @@ export default function AboutHero() {
         data-about-hero="heading"
         className="font-title text-noir text-title uppercase"
       >
-        Welcome, I&apos;m Ana Villareal
+        {t('heading')}
       </h1>
 
       <div
@@ -56,7 +58,7 @@ export default function AboutHero() {
       >
         <Image
           src="/images/about/about.jpg"
-          alt="Ana"
+          alt={t('imageAlt')}
           fill
           sizes="(min-width: 768px) 384px, 320px"
           className="object-cover"
@@ -68,8 +70,7 @@ export default function AboutHero() {
         data-about-hero="text"
         className="font-title text-noir mt-10 max-w-3xl text-[20px] uppercase leading-relaxed md:text-[30px]"
       >
-        I&apos;m here to guide you back to the part of you that already knows
-        how to flow
+        {t('text')}
       </p>
     </section>
   );

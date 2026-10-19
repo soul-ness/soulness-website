@@ -6,11 +6,13 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { Buttons } from './ui/Buttons';
+import { useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   const rootRef = useRef<HTMLElement>(null);
+  const t = useTranslations('About');
 
   useGSAP(
     () => {
@@ -55,22 +57,17 @@ export default function About() {
           data-about="text"
           className="flex flex-col justify-center text-left md:text-right"
         >
-          <p className="text-eyebrow text-oatBright">Founder of Soulness</p>
+          <p className="text-eyebrow text-oatBright">{t('eyebrow')}</p>
           <h2 className="font-title text-cherry text-title uppercase mt-4">
-            Meet Ana
+            {t('heading')}
           </h2>
-          <p className="font-body text-beigeDark text-body mt-6">
-            I support people move through life’s transitions with clarity,
-            confidence, and calm. My work bridges the nervous system, the
-            energetic field, and the subconscious mind, guiding you back to the
-            part of you that already knows how to flow.
-          </p>
+          <p className="font-body text-beigeDark text-body mt-6">{t('text')}</p>
           <Buttons
             variant="beigeDark"
             href="/about"
             className="mt-8 self-start md:self-end"
           >
-            About Me
+            {t('cta')}
           </Buttons>
         </div>
         <div
@@ -79,7 +76,7 @@ export default function About() {
         >
           <Image
             src="/images/hero/about1.jpg"
-            alt="Portrait of Ana"
+            alt={t('imageMainAlt')}
             fill
             sizes="(min-width: 768px) 47vw, 100vw"
             className="object-cover object-[center_85%]"
@@ -90,20 +87,17 @@ export default function About() {
           <div className="relative aspect-[4/5]">
             <Image
               src="/images/about/smoke.jpg"
-              alt="Detail shot"
+              alt={t('imageSideAlt')}
               fill
               sizes="(min-width: 768px) 33vw, 100vw"
               className="object-cover"
             />
           </div>
           <div>
-            <p className="text-eyebrow text-oatBright">
-              Nervous system and energy practitioner
-            </p>
+            <p className="text-eyebrow text-oatBright">{t('sideEyebrow')}</p>
 
             <p className="font-quote text-beigeDark text-[18px] leading-[1.4] mt-3">
-              "Change looks different for everyone, but the path to health,
-              presence, and inspiration always starts in the body"
+              {t('quote')}
             </p>
           </div>
         </div>

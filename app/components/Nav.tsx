@@ -2,18 +2,28 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-
-const LINKS = [
-  { label: 'Offerings', href: '/#offerings' },
-  { label: 'About Ana', href: '/about' },
-  { label: 'Group Experiences', href: '/#experiences' },
-  { label: 'Reviews', href: '/#reviews' },
-];
+import { useLocale } from 'next-intl';
+import { Link, usePathname } from '../../i18n/navigation';
+import { useTranslations } from 'next-intl';
 
 export default function Nav() {
+  const t = useTranslations('Nav');
+
   const [isOpen, setIsOpen] = useState(false);
   //to track the scroll position in order to make ir disappear and appear once scrolling down
   const [hasScrolled, setHasScrolled] = useState(false);
+  const locale = useLocale();
+  const pathname = usePathname();
+
+  const otherLocale = locale === 'en' ? 'es' : 'en';
+
+  const serviceItems = [
+    { label: t('offerings'), href: '/#offerings' },
+    { label: t('aboutAna'), href: '/about' },
+    { label: t('experiences'), href: '/#experiences' },
+    { label: t('reviews'), href: '/#reviews' },
+    { label: t('contact'), href: '/about#contact' },
+  ];
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -39,7 +49,7 @@ export default function Nav() {
           hasScrolled ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
-        <a href="/" className="relative block h-8 w-32">
+        <Link href="/" className="relative block h-8 w-32">
           <Image
             src="/images/logofinal1.png"
             alt="Logo"
@@ -47,19 +57,28 @@ export default function Nav() {
             sizes="128px"
             className="object-contain"
           />
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
-          {LINKS.map((link) => (
+          {serviceItems.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="font-body text-cherry transition-colors text-[12px] tracking-[0.15em] uppercase hover:text-beigeDark"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
+          <li>
+            <Link
+              href={pathname}
+              locale={otherLocale}
+              className="font-body text-cherry transition-colors text-[12px] tracking-[0.15em] uppercase hover:text-beigeDark"
+            >
+              {otherLocale}
+            </Link>
+          </li>
         </ul>
 
         <button
@@ -86,16 +105,24 @@ export default function Nav() {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        {LINKS.map((link) => (
-          <a
+        {serviceItems.map((link) => (
+          <Link
             key={link.href}
             href={link.href}
             onClick={() => setIsOpen(false)}
             className="font-title text-cherry text-[24px] uppercase"
           >
             {link.label}
-          </a>
+          </Link>
         ))}
+        <Link
+          href={pathname}
+          locale={otherLocale}
+          onClick={() => setIsOpen(false)}
+          className="text-label text-cherry mt-12"
+        >
+          {t('switchLabel')}
+        </Link>
       </div>
     </>
   );

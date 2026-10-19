@@ -5,11 +5,13 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutAna() {
   const rootRef = useRef<HTMLElement>(null);
+  const t = useTranslations('AboutAna');
 
   useGSAP(
     () => {
@@ -42,7 +44,7 @@ export default function AboutAna() {
   );
 
   return (
-    <section ref={rootRef} className="bg-vanilla pt-0 pb-16 md:px-16 md:py-17">
+    <section ref={rootRef} className="bg-vanilla pt-0 pb-16 md:px-16 md:py-24">
       <div className="mx-auto flex max-w-6xl flex-col gap-9">
         {/* Row 1 pl-6 pr-6 same as px-6*/}
 
@@ -60,41 +62,35 @@ export default function AboutAna() {
             />
             <div className="relative flex flex-col justify-center gap-6">
               <h2 className="font-title text-cherry text-[20px] uppercase leading-relaxed md:text-[30px] mt-6 md:mt-0">
-                My own journey began with big changes
+                {t('heading1')}
               </h2>
               <p className="font-body text-beigeDark text-body">
-                For years, I lived in a constant state of doing, chasing
-                clarity, trying to be “ready” for every next step. And my body
-                started speaking louder than my mind: exhaustion, IBS flare ups,
-                anxiety, disconnection. Learning to work with my energy and
-                supporting my nervous system changed everything.
-                <br /> <br />I realized healing wasn&apos;t about fixing myself,
-                it was about remembering how to feel safe, connected, and guided
-                from within. Now, I help others move through their own
-                transitions with that same gentleness and awareness, turning
-                uncertainty into expansion.
+                {t('body1Part1')}
+                <br /> <br />
+                {t('body1Part2')}
               </p>
             </div>
           </div>
           <div
             data-about-ana="item"
-            className="order-1 md:order-2 relative h-[400px] md:h-[420px] w-full md:mt-0"
+            className="order-1 md:order-2 relative h-[400px] md:h-full w-full md:mt-0"
           >
             <Image
               src="/images/about/about-ana1.jpg"
-              alt="Ana sitting"
+              alt={t('imageSittingAlt')}
               fill
+              loading="eager"
               sizes="(min-width: 768px) 41vw, 100vw"
               className="object-cover object-[center_95%]"
             />
           </div>
           <div
             data-about-ana="item"
-            className="hidden md:order-3 md:block relative md:h-[420px] w-full md:mt-0"
+            className="hidden md:order-3 md:block relative md:h-full w-full md:mt-0"
           >
             <Image
               src="/images/about/drops1.jpg"
-              alt="Ana sitting"
+              alt={t('imageSittingAlt2')}
               fill
               sizes="(min-width: 768px) 41vw, 100vw"
               className="object-cover object-[center_95%] "
@@ -107,8 +103,9 @@ export default function AboutAna() {
           <div data-about-ana="item" className=" relative min-h-[360px] w-full">
             <Image
               src="/images/about/spinal4.jpg"
-              alt="Ana detail"
+              alt={t('imageDetailAlt')}
               fill
+              loading="eager"
               sizes="(min-width: 768px) 41vw, 100vw"
               className="object-cover object-[center_85%]"
             />
@@ -119,18 +116,11 @@ export default function AboutAna() {
             className="flex flex-col justify-center gap-6 px-6 mt-6 md:pl-10 md:pr-0 md:mt-0"
           >
             <h2 className="font-title text-cherry text-[20px] uppercase leading-relaxed md:text-[30px]">
-              Each session and program is an experience of connection between
-              your body, energy and awareness.
+              {t('heading2')}
             </h2>
             <p className="font-body text-beigeDark text-body">
-              My approach weaves together multiple modalities, Spinal
-              Energetics, Sound Healing, ThetaHealing, subconscious
-              reprogramming, and Homeopathy , to support the body, mind, and
-              energy as one unified system. <br /> <br /> I believe healing
-              isn’t about fixing yourself, it’s about remembering your natural
-              capacity to regulate, feel, and expand. When your nervous system
-              feels safe, energy moves freely, emotions integrate, and life
-              begins to flow again.
+              {t('body2Part1')}
+              <br /> <br /> {t('body2Part2')}
             </p>
           </div>
         </div>

@@ -6,48 +6,27 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import ServiceCard from './ui/ServiceCard';
+import { useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface Service {
-  label: string;
+  id: string;
   image: string;
-  description: string;
   link: string;
   strTarget?: string;
   strRel?: string;
-  ctaLabel: string;
 }
 
 const SERVICES: Service[] = [
-  {
-    label: 'Individual Sessions',
-    image: '/images/services/s1.jpg',
-    description:
-      'Personalized energy and nervous system sessions combining Spinal Energetics, Sound Healing, and subconscious work. Perfect for moments of transition when you need clarity, balance, and deeper reconnection with yourself.',
-    link: '#cta',
-    ctaLabel: 'Initial Appointment',
-  },
-  {
-    label: 'Group Experiences',
-    image: '/images/services/spinal0.jpg',
-    description:
-      'Sharing circles, sound healing sessions and group Spinal Energetics, a journey to calm your system, release tension, and restore inner harmony in a shared community space.',
-    link: '#experiences',
-    ctaLabel: 'Book now',
-  },
-  {
-    label: 'A Journey Within',
-    image: '/images/services/cards.jpg',
-    description:
-      'A 33-card deck to realign your energy and reconnect with your intuition. Instead of rushing into your day, take a brief pause that brings clarity, resets your energy, and centers you in self-connection. Space to breathe, even on the busiest days.',
-    link: '#cta',
-    ctaLabel: 'Contact me to get Yours!',
-  },
+  { id: 'individual', image: '/images/services/s1.jpg', link: '#cta' },
+  { id: 'group', image: '/images/services/spinal0.jpg', link: '#experiences' },
+  { id: 'journey', image: '/images/services/cards.jpg', link: '#deck' },
 ];
 
 export default function Services() {
   const rootRef = useRef<HTMLElement>(null);
+  const t = useTranslations('Services');
 
   useGSAP(
     () => {
@@ -103,37 +82,33 @@ export default function Services() {
     >
       <div className="max-w-3xl mx-auto text-center">
         <p data-services="eyebrow" className="text-eyebrow text-vanilla">
-          ways we can work together
+          {t('eyebrow')}
         </p>
         <h1
           data-services="title"
           className="font-title text-white text-title uppercase font-normal mt-6"
         >
-          Guiding you back to yourself
+          {t('title')}
         </h1>
         <p
           data-services="body"
           className="font-body text-beige text-body mt-6 max-w-xl mx-auto"
         >
-          I support people through new beginnings, endings, and all the
-          in-between moments that shape who we become. Through nervous system
-          healing, energetic alignment, and somatic awareness, I help you
-          reconnect with your body’s wisdom, so you feel grounded, clear, and
-          fully alive.When your energy is aligned, life naturally flows.
+          {t('body')}
         </p>
       </div>
 
       <div className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
         {SERVICES.map((service) => (
           <ServiceCard
-            key={service.label}
-            label={service.label}
+            key={service.id}
+            label={t(`${service.id}.label`)}
             image={service.image}
-            description={service.description}
+            description={t(`${service.id}.description`)}
             link={service.link}
             strTarget={service.strTarget}
             strRel={service.strRel}
-            ctaLabel={service.ctaLabel}
+            ctaLabel={t(`${service.id}.ctaLabel`)}
           />
         ))}
       </div>

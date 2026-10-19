@@ -1,0 +1,161 @@
+{
+  "Nav": {
+    "offerings": "Servicios",
+    "aboutAna": "Sobre Ana",
+    "experiences": "Experiencias Grupales",
+    "reviews": "Reseñas",
+    "contact": "Contacto",
+    "switchLabel": "Switch to English"
+  },
+  "Hero": {
+    "heading1": "Un espacio",
+    "headingEmphasis": "para",
+    "heading2": "Regresar a ti",
+    "text": "Sanar no significa convertirte en una nueva versión de ti. Significa volver a escucharte, comprender lo que tu cuerpo ha estado intentando decirte y recuperar la capacidad de vivir con más calma, claridad y confianza.",
+    "cta": "Agenda una sesión",
+    "imageAlt": "Mujer en una silla"
+  },
+  "Services": {
+    "eyebrow": "Formas en las que podemos trabajar juntas",
+    "title": "Vuelve a escucharte",
+    "body": "Te acompaño en momentos de cambio, nuevos comienzos y transiciones importantes de tu vida. A través del trabajo con el cuerpo, el sistema nervioso y tu energía vital, te apoyo a liberar lo que ya no necesitas sostener y a construir una relación contigo misma desde un lugar de mayor calma, claridad y confianza. Porque cuando regresas a ti. La manera en la que vives, eliges y te relacionas con el mundo también cambia.",
+    "individual": {
+      "label": "Sesiones Individuales",
+      "description": "Te acompaño en esos momentos de la vida donde todo parece cambiar. A través del trabajo con el cuerpo, el sistema nervioso, tu energía vital y el subconsciente, creamos las condiciones para que tu cuerpo vuelva a sentirse seguro, puedas soltar lo que ya no necesitas sostener y recuperar la capacidad de elegir diferente.",
+      "ctaLabel": "Agenda tu primera sesión"
+    },
+    "group": {
+      "label": "Experiencias Grupales",
+      "description": "Un espacio para bajar el ritmo, salir del ruido del día a día y volver a escucharte. Integramos círculos de conexión, Sound Healing, Spinal Energetics y prácticas de regulación para ayudarte a liberar tensión, apoyar a tu sistema nervioso y regresar a ti, acompañada por una comunidad que sostiene y comparte el camino contigo. ",
+      "ctaLabel": "Quiero unirme"
+    },
+    "journey": {
+      "label": "A Journey Within",
+      "description": "A 33-card deck to help you come back to yourself. Created to bring more intention to your mornings, each card invites you to pause, reflect, reconnect with your intuition, and gently rewrite the beliefs that no longer serve you. A few intentional minutes can change the way you move through your day.",
+      "ctaLabel": "See more"
+    }
+  },
+  "About": {
+    "eyebrow": "Fundadora de Soulness",
+    "heading": "Conoce a Ana",
+    "text": "Creo que el cuerpo siempre está intentando guiarnos de regreso a nosotras mismas. Por eso acompaño a mujeres a comprender lo que han estado sosteniendo durante tanto tiempo y a crear las condiciones para volver a escucharse. Porque cuando comprendes tu historia, dejas de reaccionar desde ella. Y comienzas a construir una vida que nace desde quién eres de verdad, no desde lo que aprendiste para sobrevivir.",
+    "cta": "Mi historia",
+    "sideEyebrow": "Terapeuta de Sistema Nervioso y Energía Vital",
+    "quote": "“Creo que el cuerpo siempre sabe el camino de regreso a ti. Solo necesita el espacio para poder mostrártelo”",
+    "imageMainAlt": "Foto de Ana",
+    "imageSideAlt": "Detalles"
+  },
+  "Experiences": {
+    "eyebrow": "Experiencias Grupales",
+    "title": "No tienes que hacerlo sola",
+    "body": "Hay algo profundamente sanador en hacer una pausa junto a otras mujeres. En descubrir que no eres la única que se ha sentido perdida, agotada o desconectada. Cada encuentro es un espacio para bajar el ritmo, volver a escucharte y permitir que tu cuerpo recuerde cómo se siente estar sostenido en comunidad. Porque la conexión también sana.",
+    "prevLabel": "Experiencia anterior",
+    "nextLabel": "Siguiente experiencia",
+    "goToSlide": "Ir a la experiencia {number}",
+    "cacao": {
+      "title": "Cacao Journaling and Sound Healing",
+      "subtitle": "Sabado 15th de Mayo 10:30am - 12pm intercambio $44",
+      "label": "Book now"
+    },
+    "sound": {
+      "title": "Sound Healing",
+      "subtitle": "Sabado 15th de Mayo 10:30am - 12pm intercambio $44",
+      "label": "Book now"
+    }
+  },
+  "Deck": {
+    "heading": "A 33-card deck to help you come back to yourself",
+    "bodyPart1": "Created to bring more intention to your mornings, each card invites you to pause, reflect, reconnect with your intuition, and gently rewrite the beliefs that no longer serve you. A few intentional minutes can change the way you move through your day.",
+    "bodyPart2": "A simple yet powerful ritual to align with your highest self. Inspired by the principles of Theta Healing and the infinite realms of consciousness, this deck is your gateway to personal growth and alignment.",
+    "cta": "GET YOURS",
+    "imageHandsAlt": "Ana's hands resting together",
+    "imageDetailAlt": "Close up detail",
+    "imageTableAlt": "Wooden table"
+  },
+  "Cta": {
+    "heading": "El cuerpo siempre busca regresar al equilibrio",
+    "text": "Sanar significa apoyar la capacidad innata que tiene tu cuerpo para recuperar ese equilibrio. Juntas apoyaremos a tu sistema nervioso, estimularemos tu energía vital y crearemos las condiciones para que tu cuerpo pueda liberar aquello que ya no necesita seguir sosteniendo. Para que puedas regresar a ti y vivir con más presencia, claridad, salud y confianza.",
+    "cta": "Sesión inicial"
+  },
+  "Reviews": {
+    "prevLabel": "Reseña anterior",
+    "nextLabel": "Siguiente reseña",
+    "goToReview": "Ir a la reseña {number}",
+    "dani": {
+      "title": "El camino de Dani: del control a la claridad",
+      "quote": "“Cada sesión ha sido mágica y profundamente transformadora. Me ha permitido descubrir partes de mí que me ayudaron a crecer en todas las áreas de mi vida, desde mi propósito hasta mis relaciones.”"
+    },
+    "abi": {
+      "title": "La historia de Abi: de sentirse abrumada a confiar en sí misma",
+      "quote": "“Desde que comenzamos a trabajar juntas, he construido mi nuevo negocio con mucha más confianza y tranquilidad. Ya no siento que mi cuerpo esté luchando contra mí y hoy puedo crecer sin perderme a mí misma.”"
+    },
+    "joan": {
+      "title": "La historia de Joan: de la supervivencia a la calma",
+      "quote": "“Al principio no estaba segura de qué esperar del trabajo energético, pero hoy puedo sentir la diferencia. Me siento nuevamente conectada conmigo misma, más tranquila, más presente y mucho más estable.”"
+    }
+  },
+  "Footer": {
+    "taglinePart1": "Un espacio donde tu cuerpo es escuchado, tu sistema nervioso encuentra apoyo y y la sanación comienza desde adentro.",
+    "taglinePart2": "Desde Melbourne, acompañando a mujeres alrededor del mundo.",
+    "navigate": "Explora",
+    "contactMe": "Contáctame",
+    "instagramLabel": "Instagram",
+    "emailLabel": "Correo",
+    "copyright": "© 2026 ANA DE SOULNESS",
+    "credit": "Diseñado y desarrollado por"
+  },
+  "AboutHero": {
+    "heading": "Bienvenida, me llamo Ana Villarreal",
+    "imageAlt": "Ana",
+    "text": "Estoy aquí para acompañarte a reconectar con la sabiduría que ya existe en ti, esa que conoce el camino de regreso al equilibrio."
+  },
+  "AboutAna": {
+    "heading1": "Mi propio camino comenzó con una pérdida y grandes transiciones de vida",
+    "body1Part1": "Perder a mi mamá siendo muy pequeña, los cambios en mi sistema familiar y emigrar al otro lado del mundo marcaron la forma en la que aprendí a sobrevivir. Con el tiempo, mi cuerpo comenzó a hablar más fuerte que mi mente: agotamiento, brotes de IBS, ansiedad y desconexión conmigo misma. Aprender a apoyar a mi sistema nervioso y estimular mi energía vital lo cambió todo.",
+    "body1Part2": "Comprendí que sanar no significaba arreglar algo, sino crear las condiciones para volver a conectar conmigo y confiar en la sabiduría de mi cuerpo. Hoy acompaño a otras mujeres a transitar sus propios cambios, para que ellas también puedan regresar a sí mismas.",
+    "imageSittingAlt": "Ana sentada",
+    "imageSittingAlt2": "Ana sentada 2",
+    "imageDetailAlt": "Ana",
+    "heading2": "Cada sesión y programa es una experiencia",
+    "body2Part1": "Donde tu cuerpo, sistema nervioso, energía vital y subconsciente son acompañados de manera integral, porque todo está conectado. Más que enfocarnos únicamente en los síntomas, integro Spinal Energetics, Sound Healing, ThetaHealing, trabajo con el subconsciente y Homeopatía para comprender lo que tu cuerpo ha estado sosteniendo y crear las condiciones para que vuelva a hacer lo que naturalmente sabe hacer.",
+    "body2Part2": "Cada una de estas herramientas tiene un propósito diferente, pero todas comparten la misma intención: apoyar la capacidad innata que tiene tu cuerpo para regresar al equilibrio."
+  },
+  "AboutCert": {
+    "eyebrow": "Certificaciones & Formación",
+    "title": "Una práctica respaldada por el estudio",
+    "body": "La experiencia y el profundo respeto por la sabiduría del cuerpo. Cada una de las herramientas en las que me he formado tiene un mismo propósito: apoyar la inteligencia innata del cuerpo y la capacidad del sistema nervioso para recuperar el equilibrio, creando las condiciones para una transformación profunda y duradera.",
+    "goToCert": "Ir a la certificacion {number}",
+    "spinal": {
+      "title": "Spinal Energetics Nivel 2",
+      "subtitle": "Trabaja con la columna como un puente entre el cuerpo físico y el cuerpo energético, ayudando a liberar la tensión almacenada y apoyando la capacidad natural del cuerpo para regresar al equilibrio."
+    },
+    "sound": {
+      "title": "Sound Healing",
+      "subtitle": "Utiliza frecuencias sonoras y vibración para apoyar al sistema nervioso, promover un estado profundo de relajación y crear las condiciones para que el cuerpo pueda regresar a su equilibrio natural."
+    },
+    "theta": {
+      "title": "ThetaHealing® Avanzado",
+      "subtitle": "Trabaja con el subconsciente para transformar creencias y patrones que ya no te sirven, creando las condiciones para que tu cuerpo, mente y energía vuelvan a trabajar en la misma dirección."
+    },
+    "homeopathy": {
+      "title": "Diplomado en Homeopatía",
+      "subtitle": "La homeopatía es un sistema de medicina natural que utiliza remedios altamente individualizados para estimular la energía vital del cuerpo, apoyando su capacidad innata para sanar y regresar al equilibrio."
+    }
+  },
+  "Contact": {
+    "heading": "Conectemos",
+    "text": "Completa este breve formulario y exploremos juntas qué tipo de acompañamiento es el mejor para ti.",
+    "nameLabel": "Nombre *",
+    "emailLabel": "Correo *",
+    "messageLabel": "¿Qué te trae por aquí hoy? *",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "errorName": "Por favor, escribe tu nombre.",
+    "errorEmail": "Por favor, escribe un correo válido.",
+    "errorMessageTooShort": "Tu mensaje debe tener al menos 10 caracteres.",
+    "errorRateLimit": "Demasiadas solicitudes. Espera un minuto e inténtalo de nuevo.",
+    "errorGeneric": "Revisa tus datos e inténtalo de nuevo.",
+    "errorSendFailed": "Algo salió mal al enviar tu mensaje. Por favor, inténtalo de nuevo.",
+    "successMessage": "¡Muchas gracias por tu mensaje! Me pondré en contacto contigo muy pronto."
+  }
+}

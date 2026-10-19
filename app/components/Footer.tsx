@@ -1,13 +1,18 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { Link } from '../../i18n/navigation';
 
 export default function Footer() {
+  const t = useTranslations('Footer');
+  const tNav = useTranslations('Nav');
+
   return (
     <footer className="bg-noir py-10 px-6 md:py-14 md:px-30">
       {/* 1st row */}
       <div className="grid grid-cols-1 gap-8 md:grid-cols-[2fr_.5fr_.5fr]">
         {/* Column 1: logo + phrase */}
         <div className="flex flex-col gap-4">
-          <a href="/" className="relative block h-10 w-32">
+          <Link href="/" className="relative block h-10 w-32">
             <Image
               src="/images/logo-white1.png"
               alt="Soulness"
@@ -15,43 +20,46 @@ export default function Footer() {
               sizes="128px"
               className="object-contain"
             />
-          </a>
-          <p className="font-body text-vanilla/70 text-body">
-            A space for inner alignment and embodied transformation.
+          </Link>
+          <p className="font-body text-vanilla/70 text-body max-w-xl">
+            {t('taglinePart1')}
             <br />
-            Based in Melbourne, supporting clients worldwide.
+            {t('taglinePart2')}
           </p>
         </div>
 
         {/* Column 2: Navigate + links */}
         <div className="flex flex-col gap-4">
-          <p className="text-label text-[14px] text-white">Navigate</p>
+          <p className="text-label text-[14px] text-white">{t('navigate')}</p>
           <ul className="text-label flex flex-col gap-2 text-vanilla/70">
             <li>
-              <a href="/#offerings">Offerings</a>
+              <Link href="/#offerings">{tNav('offerings')}</Link>
             </li>
             <li>
-              <a href="/about">About Ana</a>
+              <Link href="/about">{tNav('aboutAna')}</Link>
             </li>
             <li>
-              <a href="/#experiences">Group Experiences</a>
+              <Link href="/#experiences">{tNav('experiences')}</Link>
             </li>
             <li>
-              <a href="/#reviews">Reviews</a>
+              <Link href="/#reviews">{tNav('reviews')}</Link>
+            </li>
+            <li>
+              <Link href="/about#contact">{tNav('contact')}</Link>
             </li>
           </ul>
         </div>
 
         {/* Column 3: Contact me + icons */}
         <div className="flex flex-col gap-4">
-          <p className="text-label text-[14px] text-white">Contact me</p>
+          <p className="text-label text-[14px] text-white">{t('contactMe')}</p>
 
           <div className="flex items-center gap-4">
             <a
               href="https://www.instagram.com/soulness.us"
               target="_blank"
               rel="noreferrer"
-              aria-label="Instagram"
+              aria-label={t('instagramLabel')}
             >
               <svg
                 className="h-5 w-5 text-vanilla"
@@ -71,7 +79,7 @@ export default function Footer() {
                 />
               </svg>
             </a>
-            <a href="mailto:hello@soulness.com" aria-label="Email">
+            <a href="mailto:ana@soul-ness.com" aria-label={t('emailLabel')}>
               <svg
                 className="h-5 w-5 text-white"
                 viewBox="0 0 24 24"
@@ -88,9 +96,9 @@ export default function Footer() {
       </div>
 
       <div className="mt-6 flex flex-col gap-2 border-t border-white/10 pt-6 text-vanilla/40 md:flex-row md:items-center md:justify-between">
-        <p className="text-label">© 2026 ANA FROM SOULNESS</p>
+        <p className="text-label">{t('copyright')}</p>
         <p className="text-label">
-          Design and development by{' '}
+          {t('credit')}{' '}
           <a
             href="https://www.andreamg.dev/"
             target="_blank"

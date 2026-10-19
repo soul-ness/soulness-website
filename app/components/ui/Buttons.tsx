@@ -1,6 +1,12 @@
 import type { ButtonHTMLAttributes } from 'react';
+import { Link } from '../../../i18n/navigation';
 
-type ButtonVariant = 'cherry' | 'vanilla' | 'beigeDark' | 'transparent';
+type ButtonVariant =
+  | 'cherry'
+  | 'vanilla'
+  | 'beigeDark'
+  | 'transparent'
+  | 'cont';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant: ButtonVariant;
@@ -22,6 +28,7 @@ const styles: Record<ButtonVariant, string> = {
   beigeDark: 'bg-beigeDark text-vanilla hover:bg-oat hover:text-beigeDark',
   transparent:
     'bg-transparent border border-vanilla text-vanilla hover:text-oat hover:border-oat',
+  cont: 'bg-transparent border border-noir text-noir hover:text-beigeDark hover:border-beigeDark',
 };
 
 export function Buttons({
@@ -39,10 +46,23 @@ export function Buttons({
     .join(' ');
 
   if (href) {
+    const isExternal =
+      /^(https?:)?\/\//.test(href) ||
+      href.startsWith('mailto:') ||
+      href.startsWith('tel:');
+
+    if (isExternal) {
+      return (
+        <a href={href} target={target} rel={rel} className={finalClassName}>
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <a href={href} target={target} rel={rel} className={finalClassName}>
+      <Link href={href} target={target} rel={rel} className={finalClassName}>
         {children}
-      </a>
+      </Link>
     );
   }
 
