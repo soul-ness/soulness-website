@@ -68,7 +68,7 @@ export async function handleFormSubmit(
 
   const { error } = await resend.emails.send({
     from: 'Soulness <onboarding@resend.dev>',
-    to: 'andrea.munozgr@gmail.com',
+    to: 'ana@soul-ness.com',
     replyTo: result.data.email,
     subject: `Soulness Form new message from ${result.data.name}`,
     text: `From: ${result.data.name}\n\nEmail: ${result.data.email}\n\n${result.data.message}`,
