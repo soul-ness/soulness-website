@@ -14,15 +14,14 @@ const EXPERIENCES = [
   {
     id: 'cacao',
     image: '/images/experiences/ex1.jpg',
-    link: 'https://www.verdevida.com.au/es/retreat',
+    link: 'https://www.soul-ness.com/',
   },
   {
     id: 'sound',
     image: '/images/experiences/ex2.jpg',
-    link: 'https://www.verdevida.com.au/es/retreat',
+    link: 'https://www.soul-ness.com/',
   },
 ];
-
 
 export default function Experiences() {
   const rootRef = useRef<HTMLElement>(null);
