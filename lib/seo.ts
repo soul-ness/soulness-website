@@ -1,6 +1,7 @@
 import { routing } from '../i18n/routing';
 
-export const SITE_URL = 'https://www.soul-ness.com';
+// TODO: switch back to 'https://www.soul-ness.com' once the domain is connected
+export const SITE_URL = 'https://soulness-website.vercel.app';
 
 function localePrefix(locale: string) {
   return locale === routing.defaultLocale ? '' : `/${locale}`;
