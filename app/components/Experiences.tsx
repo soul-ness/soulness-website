@@ -13,12 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 const EXPERIENCES = [
   {
     id: 'cacao',
-    image: '/images/experiences/ex1.jpg',
-    link: 'https://www.soul-ness.com/',
-  },
-  {
-    id: 'sound',
-    image: '/images/experiences/ex2.jpg',
+    image: '/images/experiences/cacao.jpeg',
     link: 'https://www.soul-ness.com/',
   },
 ];
@@ -55,9 +50,11 @@ export default function Experiences() {
 
       gsap.set([eyebrow, title, body], { opacity: 0, y: 20 });
       gsap.set(cards, { opacity: 0, y: 30, scale: 1.03 });
-      gsap.set(arrows, { opacity: 0 });
+      if (arrows.length) {
+        gsap.set(arrows, { opacity: 0 });
+      }
 
-      gsap
+      const timeline = gsap
         .timeline({
           defaults: { ease: 'power3.out' },
           scrollTrigger: {
@@ -68,13 +65,15 @@ export default function Experiences() {
         .to(eyebrow, { opacity: 1, y: 0, duration: 0.6 })
         .to(title, { opacity: 1, y: 0, duration: 0.8 }, '-=0.3')
         .to(body, { opacity: 1, y: 0, duration: 0.8 }, '-=0.4')
-
         .to(
           cards,
           { opacity: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.15 },
           '-=0.3',
-        )
-        .to(arrows, { opacity: 1, duration: 0.5 }, '-=0.3');
+        );
+
+      if (arrows.length) {
+        timeline.to(arrows, { opacity: 1, duration: 0.5 }, '-=0.3');
+      }
     },
     { scope: rootRef },
   );
@@ -125,7 +124,7 @@ export default function Experiences() {
             onScroll={handleScroll}
             className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-none [&::-webkit-scrollbar]:hidden"
           >
-            {EXPERIENCES.map((experience) => (
+            {EXPERIENCES.map((experience, index) => (
               <div
                 key={experience.id}
                 data-experience="card"
@@ -137,6 +136,7 @@ export default function Experiences() {
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
+                  preload={index === 0}
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-cherry/87 via-transparent to-cherry/80" />
                 <div className="absolute top-6 left-0 right-0 text-center">
@@ -160,48 +160,52 @@ export default function Experiences() {
               </div>
             ))}
           </div>
-          <button
-            type="button"
-            data-experience="arrow"
-            onClick={handlePrev}
-            aria-label={t('prevLabel')}
-            className="absolute cursor-pointer top-1/2 -left-15 hidden h-10 w-10 -translate-y-1/2 items-center justify-center text-vanilla hover:text-oat md:flex"
-          >
-            <svg
-              className="h-6 w-6 rotate-270"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.25}
-            >
-              <path
-                d="M12 19V5M5 12l7-7 7 7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-          <button
-            type="button"
-            data-experience="arrow"
-            onClick={handleNext}
-            aria-label={t('nextLabel')}
-            className="absolute cursor-pointer top-1/2 -right-15 hidden h-10 w-10 -translate-y-1/2 items-center justify-center text-vanilla hover:text-oat md:flex"
-          >
-            <svg
-              className="h-6 w-6 rotate-90"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.25}
-            >
-              <path
-                d="M12 19V5M5 12l7-7 7 7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
+          {EXPERIENCES.length > 1 && (
+            <>
+              <button
+                type="button"
+                data-experience="arrow"
+                onClick={handlePrev}
+                aria-label={t('prevLabel')}
+                className="absolute cursor-pointer top-1/2 -left-15 hidden h-10 w-10 -translate-y-1/2 items-center justify-center text-vanilla hover:text-oat md:flex"
+              >
+                <svg
+                  className="h-6 w-6 rotate-270"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.25}
+                >
+                  <path
+                    d="M12 19V5M5 12l7-7 7 7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                data-experience="arrow"
+                onClick={handleNext}
+                aria-label={t('nextLabel')}
+                className="absolute cursor-pointer top-1/2 -right-15 hidden h-10 w-10 -translate-y-1/2 items-center justify-center text-vanilla hover:text-oat md:flex"
+              >
+                <svg
+                  className="h-6 w-6 rotate-90"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.25}
+                >
+                  <path
+                    d="M12 19V5M5 12l7-7 7 7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </>
+          )}
           <div className="mt-4 flex justify-center gap-2 md:hidden">
             {EXPERIENCES.map((experience, index) => (
               <button

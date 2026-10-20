@@ -53,13 +53,8 @@
     "nextLabel": "Siguiente experiencia",
     "goToSlide": "Ir a la experiencia {number}",
     "cacao": {
-      "title": "Cacao Journaling and Sound Healing",
-      "subtitle": "Sabado 15th de Mayo 10:30am - 12pm intercambio $44",
-      "label": "Book now"
-    },
-    "sound": {
-      "title": "Sound Healing",
-      "subtitle": "Sabado 15th de Mayo 10:30am - 12pm intercambio $44",
+      "title": "Cacao Journaling & Sound Healing",
+      "subtitle": "Domingo 20 de Septiembre 10:30am - 12pm inversión $44",
       "label": "Book now"
     }
   },
@@ -157,5 +152,15 @@
     "errorGeneric": "Revisa tus datos e inténtalo de nuevo.",
     "errorSendFailed": "Algo salió mal al enviar tu mensaje. Por favor, inténtalo de nuevo.",
     "successMessage": "¡Muchas gracias por tu mensaje! Me pondré en contacto contigo muy pronto."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Soulness | Sanación del Sistema Nervioso y Energía en Melbourne",
+      "description": "Sesiones de regulación del sistema nervioso, Spinal Energetics y sanación energética con Ana Villarreal. Agenda tu sesión y regresa a ti."
+    },
+    "about": {
+      "title": "Sobre Ana Villarreal | Soulness",
+      "description": "Conoce a Ana Villarreal, terapeuta de sistema nervioso y energía vital en Melbourne, especializada en Spinal Energetics, Sound Healing y ThetaHealing."
+    }
   }
 }

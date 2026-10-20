@@ -13,6 +13,7 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Script from 'next/script';
 import { routing } from '../../i18n/routing';
+import { SITE_URL } from '../../lib/seo';
 
 const title = Bodoni_Moda({
   subsets: ['latin'],
@@ -44,8 +45,24 @@ const quote = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Soulness',
-  description: 'Soulness wellness practice',
+  metadataBase: new URL(SITE_URL),
+  title: 'Soulness | Nervous System & Energy Healing in Melbourne',
+  description:
+    'Nervous system regulation, Spinal Energetics, and energy healing sessions with Ana Villarreal in Melbourne.',
+  authors: [{ name: 'Ana Villarreal' }],
+  openGraph: {
+    siteName: 'Soulness',
+    type: 'website',
+    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export function generateStaticParams() {

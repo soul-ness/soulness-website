@@ -54,12 +54,7 @@
     "goToSlide": "Go to slide {number}",
     "cacao": {
       "title": "Cacao Journaling and Sound Healing",
-      "subtitle": "Saturday 15th of May from 10:30am - 12pm inversion $44",
-      "label": "Book now"
-    },
-    "sound": {
-      "title": "Sound Healing",
-      "subtitle": "Saturday 15th of May from 10:30am - 12pm inversion $44",
+      "subtitle": "Sunday 20 September from 10:30am - 12pm inversion $44",
       "label": "Book now"
     }
   },
@@ -105,7 +100,7 @@
     "credit": "Design and development by"
   },
   "AboutHero": {
-    "heading": "Welcome, my name is Ana Villareal",
+    "heading": "Welcome, my name is Ana Villarreal",
     "imageAlt": "Ana",
     "text": "I'm here to guide you back to the part of you that already knows how to return to balance."
   },
@@ -157,5 +152,15 @@
     "errorGeneric": "Please check your details and try again.",
     "errorSendFailed": "Something went wrong sending your message. Please try again.",
     "successMessage": "Thanks so much for your message! I will contact you soon."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Soulness | Nervous System & Energy Healing in Melbourne",
+      "description": "Nervous system regulation, Spinal Energetics, and energy healing sessions with Ana Villarreal. Book a session and start your journey back to yourself."
+    },
+    "about": {
+      "title": "About Ana Villarreal | Soulness",
+      "description": "Meet Ana Villarreal, nervous system and energy practitioner in Melbourne specializing in Spinal Energetics, Sound Healing, and ThetaHealing."
+    }
   }
 }

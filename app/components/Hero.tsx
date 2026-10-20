@@ -89,7 +89,7 @@ export default function Hero() {
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover"
-          priority
+          preload
         />
       </div>
     </section>

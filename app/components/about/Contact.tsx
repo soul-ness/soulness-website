@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Buttons } from '../ui/Buttons';
 import { handleFormSubmit, type FormState } from './Actions';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const initialState: FormState = { success: false, message: '' };
 
@@ -16,6 +16,7 @@ export default function Contact() {
     initialState,
   );
   const t = useTranslations('Contact');
+  const locale = useLocale();
 
   useGSAP(
     () => {
@@ -71,6 +72,7 @@ export default function Contact() {
           </p>
         ) : (
           <form action={formAction} className="w-full">
+            <input type="hidden" name="locale" value={locale} />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
               <div className="flex flex-col gap-3">
                 <label htmlFor="name" className="text-label text-noir">

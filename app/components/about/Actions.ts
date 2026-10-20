@@ -3,7 +3,9 @@
 import { z } from 'zod';
 import { headers } from 'next/headers';
 import { Resend } from 'resend';
+import { hasLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import { routing } from '../../../i18n/routing';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -34,7 +36,14 @@ export async function handleFormSubmit(
   _prevState: FormState,
   formData: FormData,
 ): Promise<FormState> {
-  const t = await getTranslations('Contact');
+  const requestedLocale = formData.get('locale');
+  const locale =
+    typeof requestedLocale === 'string' &&
+    hasLocale(routing.locales, requestedLocale)
+      ? requestedLocale
+      : routing.defaultLocale;
+
+  const t = await getTranslations({ locale, namespace: 'Contact' });
 
   const schema = z.object({
     name: z.string().min(2, t('errorName')).max(80),
@@ -68,7 +77,7 @@ export async function handleFormSubmit(
 
   const { error } = await resend.emails.send({
     from: 'Soulness <onboarding@resend.dev>',
-    to: 'andrea.munozgr@gmail.com',
+    to: 'ana@soul-ness.com',
     replyTo: result.data.email,
     subject: `Soulness Form new message from ${result.data.name}`,
     text: `From: ${result.data.name}\n\nEmail: ${result.data.email}\n\n${result.data.message}`,
