@@ -125,7 +125,7 @@ export default function AboutCert() {
         </div>
       </div>
 
-      {/* Desktop grid */}
+      {/* Desktop grid - */}
       <div className="mx-auto mt-14 hidden max-w-5xl grid-cols-4 gap-6 md:mt-20 md:grid">
         {CERTIFICATIONS.map((certId) => (
           <div
