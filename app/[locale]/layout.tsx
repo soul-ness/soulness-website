@@ -1,5 +1,7 @@
 // app/[locale]/layout.tsx
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+
 import {
   Bodoni_Moda,
   Petit_Formal_Script,
@@ -102,6 +104,7 @@ export default async function RootLayout({
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="afterInteractive"
         />
+        <Analytics />
       </body>
     </html>
   );
